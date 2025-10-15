@@ -46,6 +46,28 @@ Options:
   -h, --help               Print this help message
 ```
 
+#### Setting Up as `cron` Job
+
+Handily, you can set up this script to run as a `cron` job. To do so, add the
+following line to your `crontab`:
+
+1. Open your `crontab` with `crontab -e` (this will open in whatever your
+   default editor `$EDITOR` is set to).
+
+2. Add the following line to the end of the file:
+
+   ```bash
+   30 10 * * Mon,Tue,Fri ~/path/to/commp412-utils/fetch_new_lectures.sh
+   ```
+
+   This will run the script every Monday, Tuesday, and Friday at 10:30am (local
+   system time).
+
+3. Save and exit the file.
+
+4. Verify that the job is running by running `crontab -l`. You should see the
+   newly added job listed.
+
 ### `make_submission`
 
 This script is intended to be **run on CLEAR**. It creates a TAR archive of the
