@@ -13,10 +13,21 @@ Utility scripts and reference materials for COMP 412 @ Rice University.
 >
 > and ignore in your lab's `.gitignore` by adding `zill412` to the list.
 
+- [ILOC Blocks](#iloc-blocks)
+- [Scripts](#scripts)
+  - [fetch_new_lectures](#fetch_new_lectures)
+  - [make_submission](#make_submission)
+  - [Copying to CLEAR](#copying-to-clear)
+- [Contributing](#contributing)
+
+---
+
 ## ILOC Blocks
 
 In the [`ILOC`](./ILOC/) directory, you will find the full list of ILOC blocks
 that can be used for testing and benchmarking.
+
+---
 
 ## Scripts
 
@@ -71,3 +82,10 @@ You can either clone this repository directly on CLEAR, or manually copy the
 cd comp412-utils
 scp make_submission.sh netid@ssh.clear.rice.edu:/path/to/store/make_submission.sh
 ```
+
+---
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request if you
+find a bug, have another script, or have a suggestion for a new script.
