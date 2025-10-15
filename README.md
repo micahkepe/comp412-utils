@@ -27,7 +27,7 @@ supplementary files from the CLEAR server. You can choose to include the videos
 as well.
 
 ```
-Usage: ./fetch_new_lectures.sh [-n|--netid <netid>] [-e|--exclude-videos] [-h|--help]
+Usage: ./fetch_new_lectures.sh [-n|--netid <netid>] [-i|--include-videos] [-h|--help]
 
 Options:
   -n, --netid <netid>      Your netid on the CLEAR server

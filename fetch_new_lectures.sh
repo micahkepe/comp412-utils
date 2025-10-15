@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # Fetches new lectures from the CLEAR server
-# Usage: ./fetch_new_lectures.sh [-n|--netid <netid>] [-e|--exclude-videos] [-h|--help]
+# Usage: ./fetch_new_lectures.sh [-n|--netid <netid>] [-i|--include-videos] [-h|--help]
 # Options:
 #   -n, --netid <netid>      Your netid on the CLEAR server
-#   -i, --include-videos     Exclude videos from the lecture directory
+#   -i, --include-videos     Include videos from the lecture directory
 #   -h, --help               Print this help message
 # ------------------------------------------------------------------------------
 # Author: Micah Kepe <mik3@rice.edu>
@@ -13,7 +13,7 @@ NETID="mik3"
 INCLUDE_VIDEOS="false"
 
 print-usage() {
-  echo "Usage: $0 [-n|--netid <netid>] [-e|--exclude-videos] [-h|--help]"
+  echo "Usage: $0 [-n|--netid <netid>] [-i|--include-videos] [-h|--help]"
   echo ""
   echo "Options:"
   echo "  -n, --netid <netid>      Your netid on the CLEAR server"
@@ -48,13 +48,13 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
-VIDEO_OPTION="--exclude '*.mp4'"
+VIDEO_OPTION=(--exclude '*.mp4')
 if [ "$INCLUDE_VIDEOS" = "true" ]; then
-  VIDEO_OPTION=""
+  VIDEO_OPTION=()
 fi
 
 # Lectures (save to local "Lectures")
-rsync -av --ignore-existing "$VIDEO_OPTION" "$NETID"@ssh.clear.rice.edu:/clear/www/htdocs/comp412/Support/Lectures/* Lectures
+rsync -av --ignore-existing "${VIDEO_OPTION[@]}" "$NETID"@ssh.clear.rice.edu:/clear/www/htdocs/comp412/Support/Lectures/ Lectures
 
 # Supplemental lectures (save to local "Supplemental")
-rsync -av --ignore-existing "$NETID"@ssh.clear.rice.edu:/clear/www/htdocs/comp412/Support/* --exclude 'Lectures/' "$VIDEO_OPTION" Supplemental
+rsync -av --ignore-existing "$NETID"@ssh.clear.rice.edu:/clear/www/htdocs/comp412/Support/ --exclude 'Lectures/' "${VIDEO_OPTION[@]}" Supplemental
