@@ -5,8 +5,13 @@ Utility scripts and reference materials for COMP 412 @ Rice University.
 > [!NOTE]
 > This repository does not provide a testing framework for labs. For that, I
 > recommend the [`zill412`](https://github.com/zawie/zill412) repository, which
-> you can add a Git submodule to your lab respositories (`git submodule add https://github.com/zawie/zill412 zill412`)
-> and ignore in your lab's `.gitignore`.
+> you can add a Git submodule to your lab repositories:
+>
+> ```bash
+> git submodule add https://github.com/zawie/zill412 zill412
+> ```
+>
+> and ignore in your lab's `.gitignore` by adding `zill412` to the list.
 
 ## ILOC Blocks
 
@@ -26,7 +31,7 @@ Usage: ./fetch_new_lectures.sh [-n|--netid <netid>] [-e|--exclude-videos] [-h|--
 
 Options:
   -n, --netid <netid>      Your netid on the CLEAR server
-  -i, --include-videos     Exclude videos from the lecture directory
+  -i, --include-videos     Include videos from the lecture directory
   -h, --help               Print this help message
 ```
 
@@ -55,4 +60,14 @@ Usage: ./make_submission.sh <source directory> [-l | --lab] <lab-num>
   <source directory>	Directory containing the source code
   -l, --lab 		Lab number
   -h, --help		Print help
+```
+
+### Copying to CLEAR
+
+You can either clone this repository directly on CLEAR, or manually copy the
+`make_submission.sh` script with `scp`:
+
+```bash
+cd comp412-utils
+scp make_submission.sh netid@ssh.clear.rice.edu:/path/to/store/make_submission.sh
 ```
