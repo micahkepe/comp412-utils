@@ -2,9 +2,10 @@
 
 Utility scripts and reference materials for COMP 412 @ Rice University.
 
-> [!NOTE] This repository does not provide a testing framework for labs. For
-> that, I recommend the [`zill412`](https://github.com/zawie/zill412)
-> repository, which you can add a Git submodule to your lab respositories (`git submodule add https://github.com/zawie/zill412 zill412`)
+> [!NOTE]
+> This repository does not provide a testing framework for labs. For that, I
+> recommend the [`zill412`](https://github.com/zawie/zill412) repository, which
+> you can add a Git submodule to your lab respositories (`git submodule add https://github.com/zawie/zill412 zill412`)
 > and ignore in your lab's `.gitignore`.
 
 ## ILOC Blocks
@@ -43,7 +44,8 @@ with an error.
 After the submission is created, it will display a message of the necessary
 command to submit the lab.
 
-> [!NOTE] This script was original written for Rust labs as that is the language
+> [!NOTE]
+> This script was original written for Rust labs as that is the language
 > I am using, but you can easily modify the script's `EXCLUDE_PATTERNS` variable
 > to exclude files or directories that you do not want to include in the
 > submission based on your language of choice.
