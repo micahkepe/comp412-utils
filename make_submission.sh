@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Description: Make a tar archive for lab source code and timestamped backups
 #
