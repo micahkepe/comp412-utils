@@ -16,8 +16,10 @@ Utility scripts and reference materials for COMP 412 @ Rice University.
 - [ILOC Blocks](#iloc-blocks)
 - [Scripts](#scripts)
   - [fetch_new_lectures](#fetch_new_lectures)
+    - [Setting Up as cron Job](#setting-up-as-cron-job)
   - [make_submission](#make_submission)
   - [Copying to CLEAR](#copying-to-clear)
+  - [Local Simulator Testing](#local-simulator-testing)
 - [Contributing](#contributing)
 
 ---
@@ -106,6 +108,22 @@ scp make_submission.sh netid@ssh.clear.rice.edu:/path/to/store/make_submission.s
 ```
 
 ---
+
+### Local Simulator Testing
+
+You can use `scp` to obtain a local copy of the ILOC simulator from CLEAR:
+
+For MacOS:
+
+```bash
+scp netid@ssh.clear.rice.edu:/clear/www/htdocs/comp412/simForMacOS macos-sim
+```
+
+For Linux:
+
+```bash
+scp netid@ssh.clear.rice.edu:/clear/courses/comp412/students/lab2/sim sim
+```
 
 ## Contributing
 
