@@ -5,7 +5,7 @@
 # Usage: ./make_submission.sh <source directory> [-l | --lab] <lab-num>
 #
 # Options:
-#   -l, --lab <lab-num>  Lab number
+#   -l, --lab <lab-num>  Lab number (1-3)
 #   -h, --help           Print help
 #
 # Example: ./make_submission.sh ~/comp412/lab-1 -l 1
@@ -38,7 +38,7 @@ EXCLUDE_PATTERNS=(
 print-usage() {
   echo "Usage: ./make_submission.sh <source directory> [-l | --lab] <lab-num>"
   echo "  <source directory>	Directory containing the source code"
-  echo "  -l, --lab 		Lab number"
+  echo "  -l, --lab 		Lab number [1-3]"
   echo "  -h, --help		Print help"
 }
 
@@ -92,8 +92,8 @@ if [[ -z "$LAB" ]]; then
   exit 1
 fi
 
-if ! [[ "$LAB" =~ ^[0-9]+$ ]]; then
-  print-error "Lab number is not a valid positive integer"
+if ! [[ "$LAB" =~ ^[1-3]$ ]]; then
+  print-error "Lab number not in range [1,3]"
   print-usage
   exit 1
 fi
