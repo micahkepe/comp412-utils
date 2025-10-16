@@ -59,7 +59,7 @@ following line to your `crontab`:
 2. Add the following line to the end of the file:
 
    ```bash
-   30 10 * * Mon,Tue,Fri ~/path/to/commp412-utils/fetch_new_lectures.sh
+   30 10 * * Mon,Tue,Fri ~/path/to/comp412-utils/fetch_new_lectures.sh
    ```
 
    This will run the script every Monday, Tuesday, and Friday at 10:30am (local
