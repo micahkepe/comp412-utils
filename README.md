@@ -11,7 +11,8 @@ Utility scripts and reference materials for COMP 412 @ Rice University.
 > git submodule add https://github.com/zawie/zill412 zill412
 > ```
 >
-> and ignore in your lab's `.gitignore` by adding `zill412` to the list.
+> If you are using the `make_submission.sh` script below, the `zill412`
+> submodule is already in exclude patterns, so you do not need to add it.
 
 - [ILOC Blocks](#iloc-blocks)
 - [Scripts](#scripts)
