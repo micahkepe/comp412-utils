@@ -108,6 +108,34 @@ cd comp412-utils
 scp make_submission.sh netid@ssh.clear.rice.edu:/path/to/store/make_submission.sh
 ```
 
+## `video_links`
+
+Prints to stdout Markdown-formatted or plain text links for all the
+videos/resources that are in the remote `/clear/www/htdocs/comp412/Support/`
+directory. Useful for copy-pasting to Piazza Markdown editor.
+
+Usage:
+
+```
+Usage: ./video_links.sh [-n | --netid <netid>] [-p | --plain]
+Options:
+  -n, --netid <netid>      Your netid on the CLEAR server
+  -p, --plain              Print plain text links instead of Markdown
+  -h, --help               Print this help message
+```
+
+### Example: Fetch all links for lab 1:
+
+```bash
+./video_links.sh | grep "Lab1"
+```
+
+### Example: Get plain text links for all videos (mp4 files):
+
+```bash
+./video_links.sh -p | grep "\.mp4"
+```
+
 ---
 
 ### Local Simulator Testing

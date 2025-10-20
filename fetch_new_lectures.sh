@@ -1,14 +1,16 @@
 #!/usr/bin/env bash
 # Fetches new lectures from the CLEAR server
+#
 # Usage: ./fetch_new_lectures.sh [-n|--netid <netid>] [-i|--include-videos] [-h|--help]
+#
 # Options:
 #   -n, --netid <netid>      Your netid on the CLEAR server
 #   -i, --include-videos     Include videos from the lecture directory
 #   -h, --help               Print this help message
-# ------------------------------------------------------------------------------
+#
 # Author: Micah Kepe <mik3@rice.edu>
 # Date: 2025-10-15
-# ------------------------------------------------------------------------------
+
 NETID="mik3"
 INCLUDE_VIDEOS="false"
 
