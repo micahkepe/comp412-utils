@@ -20,6 +20,10 @@ Utility scripts and reference materials for COMP 412 @ Rice University.
     - [Setting Up as cron Job](#setting-up-as-cron-job)
   - [make_submission](#make_submission)
   - [Copying to CLEAR](#copying-to-clear)
+- [video_links](#video_links)
+  - [Save All Links to Markdown File](#save-all-links-to-markdown-file)
+  - [Example: Fetch all links for lab 1:](#example-fetch-all-links-for-lab-1)
+  - [Example: Get plain text links for all videos (mp4 files):](#example-get-plain-text-links-for-all-videos-mp4-files)
   - [Local Simulator Testing](#local-simulator-testing)
 - [Contributing](#contributing)
 
@@ -122,6 +126,12 @@ Options:
   -n, --netid <netid>      Your netid on the CLEAR server
   -p, --plain              Print plain text links instead of Markdown
   -h, --help               Print this help message
+```
+
+### Save All Links to Markdown File
+
+```bash
+echo -e "# Video Links\n" > links.md; ./video_links.sh | awk '{ print "- "$0 }' >> links.md
 ```
 
 ### Example: Fetch all links for lab 1:
