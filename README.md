@@ -19,12 +19,12 @@ Utility scripts and reference materials for COMP 412 @ Rice University.
   - [fetch_new_lectures](#fetch_new_lectures)
     - [Setting Up as cron Job](#setting-up-as-cron-job)
   - [make_submission](#make_submission)
-  - [Copying to CLEAR](#copying-to-clear)
-- [video_links](#video_links)
-  - [Save All Links to Markdown File](#save-all-links-to-markdown-file)
-  - [Example: Fetch all links for lab 1:](#example-fetch-all-links-for-lab-1)
-  - [Example: Get plain text links for all videos (mp4 files):](#example-get-plain-text-links-for-all-videos-mp4-files)
-  - [Local Simulator Testing](#local-simulator-testing)
+    - [Copying to CLEAR](#copying-to-clear)
+  - [video_links](#video_links)
+    - [Save All Links to Markdown File](#save-all-links-to-markdown-file)
+    - [Example: Fetch all links for lab 1:](#example-fetch-all-links-for-lab-1)
+    - [Example: Get plain text links for all videos (mp4 files):](#example-get-plain-text-links-for-all-videos-mp4-files)
+- [Local Simulator Testing](#local-simulator-testing)
 - [Contributing](#contributing)
 
 ---
@@ -102,7 +102,7 @@ Usage: ./make_submission.sh <source directory> [-l | --lab] <lab-num>
   -h, --help		Print help
 ```
 
-### Copying to CLEAR
+#### Copying to CLEAR
 
 You can either clone this repository directly on CLEAR, or manually copy the
 `make_submission.sh` script with `scp`:
@@ -112,7 +112,7 @@ cd comp412-utils
 scp make_submission.sh netid@ssh.clear.rice.edu:/path/to/store/make_submission.sh
 ```
 
-## `video_links`
+### `video_links`
 
 Prints to stdout Markdown-formatted or plain text links for all the
 videos/resources that are in the remote `/clear/www/htdocs/comp412/Support/`
@@ -128,19 +128,19 @@ Options:
   -h, --help               Print this help message
 ```
 
-### Save All Links to Markdown File
+#### Save All Links to Markdown File
 
 ```bash
 echo -e "# Video Links\n" > links.md; ./video_links.sh | awk '{ print "- "$0 }' >> links.md
 ```
 
-### Example: Fetch all links for lab 1:
+#### Example: Fetch all links for lab 1:
 
 ```bash
 ./video_links.sh | grep "Lab1"
 ```
 
-### Example: Get plain text links for all videos (mp4 files):
+#### Example: Get plain text links for all videos (mp4 files):
 
 ```bash
 ./video_links.sh -p | grep "\.mp4"
@@ -148,7 +148,7 @@ echo -e "# Video Links\n" > links.md; ./video_links.sh | awk '{ print "- "$0 }' 
 
 ---
 
-### Local Simulator Testing
+## Local Simulator Testing
 
 You can use `scp` to obtain a local copy of the ILOC simulator from CLEAR:
 
