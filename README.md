@@ -15,6 +15,7 @@ Utility scripts and reference materials for COMP 412 @ Rice University.
 > submodule is already in exclude patterns, so you do not need to add it.
 
 - [ILOC Blocks](#iloc-blocks)
+- [Research Papers](#research-papers)
 - [Scripts](#scripts)
   - [fetch_new_lectures](#fetch_new_lectures)
     - [Setting Up as cron Job](#setting-up-as-cron-job)
@@ -33,6 +34,13 @@ Utility scripts and reference materials for COMP 412 @ Rice University.
 
 In the [`ILOC`](./ILOC/) directory, you will find the full list of ILOC blocks
 that can be used for testing and benchmarking.
+
+---
+
+## Research Papers
+
+In the [`papers`](./papers/) directory, you will find a subset of the relevant
+research papers for the labs.
 
 ---
 
