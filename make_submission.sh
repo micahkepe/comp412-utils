@@ -32,6 +32,7 @@ EXCLUDE_PATTERNS=(
   ".gitignore"
   "tests"
   ".github"
+  "*.dot"
 )
 
 print-usage() {
