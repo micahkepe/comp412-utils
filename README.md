@@ -169,7 +169,11 @@ scp netid@ssh.clear.rice.edu:/clear/www/htdocs/comp412/simForMacOS macos-sim
 For Linux:
 
 ```bash
+# Lab 2 Simulator
 scp netid@ssh.clear.rice.edu:/clear/courses/comp412/students/lab2/sim sim
+
+# Lab 3 Simulator
+scp netid@ssh.clear.rice.edu:/clear/courses/comp412/students/lab3/sim sim
 ```
 
 ## Contributing
