@@ -30,7 +30,6 @@ EXCLUDE_PATTERNS=(
   "target"
   ".git"
   ".gitignore"
-  "tests"
   ".github"
   "*.dot"
 )
