@@ -26,6 +26,7 @@ Utility scripts and reference materials for COMP 412 @ Rice University.
     - [Example: Fetch all links for lab 1:](#example-fetch-all-links-for-lab-1)
     - [Example: Get plain text links for all videos (mp4 files):](#example-get-plain-text-links-for-all-videos-mp4-files)
 - [Local Simulator Testing](#local-simulator-testing)
+- [Documentation](#documentation)
 - [Contributing](#contributing)
 
 ---
@@ -181,6 +182,15 @@ scp netid@ssh.clear.rice.edu:/clear/courses/comp412/students/lab2/sim sim
 # Lab 3 Simulator
 scp netid@ssh.clear.rice.edu:/clear/courses/comp412/students/lab3/sim sim
 ```
+
+---
+
+## Documentation
+
+In the [`docs`](./docs/) directory, you will find the relevant documentation for
+course software.
+
+---
 
 ## Contributing
 
