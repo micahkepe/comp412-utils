@@ -163,7 +163,13 @@ You can use `scp` to obtain a local copy of the ILOC simulator from CLEAR:
 For MacOS:
 
 ```bash
-scp netid@ssh.clear.rice.edu:/clear/www/htdocs/comp412/simForMacOS macos-sim
+# Lab 2 Simulator
+scp netid@ssh.clear.rice.edu:/clear/www/htdocs/comp412/simForMacOS
+macos-sim-lab2
+
+# Lab 3 Simulator
+scp netid@ssh.clear.rice.edu:/clear/www/htdocs/comp412/SimLab3_for_MacOS
+macos-sim-lab3
 ```
 
 For Linux:
