@@ -56,7 +56,7 @@ if [ "$INCLUDE_VIDEOS" = "true" ]; then
 fi
 
 # Lectures (save to local "Lectures")
-rsync -av --ignore-existing "${VIDEO_OPTION[@]}" "$NETID"@ssh.clear.rice.edu:/clear/www/htdocs/comp412/Support/Lectures/ Lectures
+rsync -avz --ignore-existing "${VIDEO_OPTION[@]}" "$NETID"@ssh.clear.rice.edu:/clear/www/htdocs/comp412/Support/Lectures/ Lectures
 
 # Supplemental lectures (save to local "Supplemental")
-rsync -av --ignore-existing "$NETID"@ssh.clear.rice.edu:/clear/www/htdocs/comp412/Support/ --exclude 'Lectures/' "${VIDEO_OPTION[@]}" Supplemental
+rsync -avz --ignore-existing "$NETID"@ssh.clear.rice.edu:/clear/www/htdocs/comp412/Support/ --exclude 'Lectures/' "${VIDEO_OPTION[@]}" Supplemental
